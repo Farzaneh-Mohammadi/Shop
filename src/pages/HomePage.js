@@ -1,11 +1,12 @@
 import React from "react";
 import Layout from "../components/Layout/Layout";
+import Products from "../components/Products";
 
 const HomePage = () => {
   return (
     <div>
       <Layout>
-        ffj
+        <Products />
       </Layout>
     </div>
   );
