@@ -1,10 +1,14 @@
-import logo from './logo.svg';
 
+import { Route, Routes } from 'react-router-dom';
+import HomePage from './pages/HomePage';
 function App() {
   return (
-    <div>
-hi
-    </div>
+    <>
+<Routes>
+						<Route path="/" element={<HomePage />} />
+						{/* <Route path="/cart" element={<CartPage />} /> */}
+					</Routes>
+          </>
   );
 }
 

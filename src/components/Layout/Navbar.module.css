@@ -1,0 +1,13 @@
+.navContainer{
+    background: #22d3ee;
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+}
+
+.navLeft{
+    width: 15%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 2rem;
+}

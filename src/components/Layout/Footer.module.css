@@ -1,0 +1,14 @@
+.footerContainer {
+    background-color: #155e75;
+    padding: .5rem 0;
+    margin-bottom: 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footerText {
+    text-align: center;
+    color: #fff;
+    font-weight: 400;
+}
