@@ -1,15 +1,15 @@
-.cards{
-display: grid;
-grid-template-columns: repeat(4, 1fr);
-gap: 2rem;
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
 
-/* display: flex;
+    /* display: flex;
 flex-wrap: wrap; */
-background-color: #eaeaea;
-padding: 3rem 3rem 7rem 3rem;
+    background-color: #eaeaea;
+    padding: 3rem;
 }
 
-.productImg{
+.productImg {
     display: flex;
     justify-content: center;
     height: 250px;
@@ -18,16 +18,16 @@ padding: 3rem 3rem 7rem 3rem;
 
 }
 
-.card{
-background-color: #fff;
-border-radius: 10px;
-padding: 20px 40px;
-/* padding: 20px 60px; */
-/* margin: 15px; */
-box-shadow: 2px 2px 10px #0e7490;
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px 40px;
+    min-width: 300px;
+    max-width: 400px;
+    box-shadow: 2px 2px 10px #547983a4;
 }
 
-.cardBtn{
+.cardBtn {
     width: 100%;
     padding: .7rem .5rem;
     border: none;
@@ -36,5 +36,73 @@ box-shadow: 2px 2px 10px #0e7490;
     color: #fff;
     font-size: 15px;
     font-weight: 400;
-   margin: 0 auto;
+    margin: 0 auto;
 }
+
+
+
+.searchSort{
+    display: flex;
+    justify-content: space-between;
+    background-color: #eaeaea;
+    padding: 2rem 4rem ;
+    align-items: center;
+}
+
+.filters{
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.sortContainer{
+    /* width: 13%; */
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+}
+
+.sortContainer p{
+    margin-right: 10px;
+    /* margin-left: 3rem; */
+    font-size: 16px;
+}
+
+/* --------- size ---------- */
+.sizeContainer{
+    /* width: 13%; */
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+  }
+
+  .sizeContainer p{
+margin-right: 10px;
+font-size: 16px;
+
+  }
+
+/* --------- search ---------- */
+.searchContainer{
+width: 20%;
+display: flex;
+align-items: center;
+}
+
+
+
+.searchInp{
+    border: 1px solid rgb(190, 190, 190);
+    border-radius: 5px;
+    padding: 8px;
+    margin-left: 10px;
+}
+
+
+.searchInp:focus {
+    outline: none !important;
+    border: 2px solid #06b6d4;
+  }
+
+

@@ -1,9 +1,8 @@
 .footerContainer {
     background-color: #155e75;
     padding: .5rem 0;
-    margin-bottom: 0;
-    position: fixed;
-    bottom: 0;
+    /* margin-bottom: 0;
+    bottom: 0; */
     width: 100%;
 }
 

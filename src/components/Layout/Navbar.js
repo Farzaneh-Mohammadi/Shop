@@ -1,22 +1,33 @@
-import { NavLink } from 'react-router-dom'
-import styles from "./Navbar.module.css"
-
+import { NavLink } from "react-router-dom";
+import { useCart } from "../../context/CartProvider";
+import  "./Navbar.css";
 
 const Navbar = () => {
+  const { cart } = useCart();
+
   return (
     <header>
-        <nav className={styles.navContainer}>
-            <ul className={styles.navLeft}>
-                <li>
-                    <NavLink to="/" style={{fontWeight: "500", fontSize: "18px"}}>Home</NavLink>
-                </li>
-                <li>
-                <NavLink to="/cart" style={{fontWeight: "500", fontSize: "18px"}}>Cart</NavLink>
-                </li>
-            </ul>
-        </nav>
-    </header>
-  )
-}
+      <nav className="navContainer">
+        <ul className="navLeft">
+          <li>
+            <NavLink to="/"  className={(navData) => navData.isActive ? "nav-active-link" : ""}  style={{ fontWeight: "500", fontSize: "18px" }}>
+              Home
+            </NavLink>
+          </li>
 
-export default Navbar
+
+          <li className="nav-li">
+            <NavLink  to="/cart"  className={(navData) => navData.isActive ? "nav-active-linkk" : ""}  style={{ fontWeight: "500", fontSize: "18px" }}>
+              Cart
+              <span className='nav-cartBadge'>{cart.length}</span>
+            </NavLink>
+          </li>
+
+
+        </ul>
+      </nav>
+    </header>
+  );
+};
+
+export default Navbar;

@@ -1,0 +1,88 @@
+{
+    "products": [
+        {
+            "title": "skirt",
+            "price": 56,
+            "category": "womens",
+            "image" : "https://www.pngmart.com/files/13/Denim-Skirt-PNG-HD.png",
+            "categoryId": "1",
+            "id": "1",
+            "size": [ "XL", "L"]
+        },
+        {
+            "title": "sweatshirt",
+            "price": 37,
+            "category": "mens",
+            "image" : "https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_.jpg",
+            "categoryId": "2",
+            "id": "2",
+            "size": ["L"]
+        },
+        {
+            "title": "bag",
+            "price": 98,
+            "category": "womens",
+            "image" : "https://www.pngmart.com/files/15/Black-Handbag-Chain-Transparent-PNG.png",
+            "categoryId": "1",
+            "id": "3",
+            "size": [ "XL"]
+        },
+        {
+            "title": "jeans",
+            "price": 37,
+            "category": "mens",
+            "image" : "https://www.pngmart.com/files/16/Denim-Jeans-PNG-HD.png",
+            "categoryId": "2",
+            "id": "4",
+            "size": [ "M"]
+        },
+        {
+            "title": "T-shirt",
+            "price": 45,
+            "category": "mens",
+            "image" : "https://www.pngall.com/wp-content/uploads/2016/04/Polo-Shirt-Free-PNG-Image.png",
+            "categoryId": "2",
+            "id": "5",
+            "size": [ "M"]
+        },
+        {
+            "title": "socks",
+            "price": 62,
+            "category": "mens",
+            "image" : "https://www.pngmart.com/files/7/Socks-Transparent-PNG.png",
+            "categoryId": "2",
+            "id": "6",
+            "size": [ "S"]
+        },
+        {
+            "title": "coat",
+            "price": 21,
+            "category": "mens",
+            "image" : "https://www.pngmart.com/files/6/Fur-Coat-PNG-Background-Image.png",
+            "categoryId": "2",
+            "id": "7",
+            "size": ["L"]
+        },
+        {
+            "title": "hat",
+            "price": 39,
+            "category": "mens",
+            "image" : "https://www.pngmart.com/files/3/Fancy-Hat-PNG-Photos.png",
+            "categoryId": "2",
+            "id": "8",
+            "size": [ "XL"]
+        }
+    ],
+
+    "categories" : [
+        {
+            "id" : "1",
+            "name" : "womens"
+        },
+        {
+            "id" : "2",
+            "name" : "mens"
+        }
+    ]
+
+}
