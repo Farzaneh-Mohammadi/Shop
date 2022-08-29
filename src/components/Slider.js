@@ -1,18 +1,17 @@
 // import { ArrowLeftOutlined, ArrowRightOutlined } from "@material-ui/icons";
 import { AiFillCaretLeft } from "react-icons/ai";
-import { AiFillCaretRight} from "react-icons/ai";
+import { AiFillCaretRight } from "react-icons/ai";
 
 import { useState } from "react";
 import styled from "styled-components";
 import { sliderItems } from "../data";
 
 const Container = styled.div`
-  /* width: 100%; */
   height: 60vh;
   display: flex;
   position: relative;
   overflow: hidden;
-  margin: 2rem;
+  margin: 2rem ;
 `;
 
 const Arrow = styled.div`
@@ -62,7 +61,7 @@ const Image = styled.img`
 
 const InfoContainer = styled.div`
   flex: 1;
-  padding: 50px ;
+  padding: 50px;
   margin: -15% 10rem 0 5rem;
 `;
 

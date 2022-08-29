@@ -1,21 +1,12 @@
 {
     "products": [
         {
-            "title": "skirt",
-            "price": 56,
-            "category": "womens",
-            "image" : "https://www.pngmart.com/files/13/Denim-Skirt-PNG-HD.png",
-            "categoryId": "1",
-            "id": "1",
-            "size": [ "XL", "L"]
-        },
-        {
             "title": "sweatshirt",
             "price": 37,
             "category": "mens",
             "image" : "https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_.jpg",
             "categoryId": "2",
-            "id": "2",
+            "id": "1",
             "size": ["L"]
         },
         {
@@ -24,7 +15,7 @@
             "category": "womens",
             "image" : "https://www.pngmart.com/files/15/Black-Handbag-Chain-Transparent-PNG.png",
             "categoryId": "1",
-            "id": "3",
+            "id": "2",
             "size": [ "XL"]
         },
         {
@@ -33,7 +24,7 @@
             "category": "mens",
             "image" : "https://www.pngmart.com/files/16/Denim-Jeans-PNG-HD.png",
             "categoryId": "2",
-            "id": "4",
+            "id": "3",
             "size": [ "M"]
         },
         {
@@ -42,7 +33,7 @@
             "category": "mens",
             "image" : "https://www.pngall.com/wp-content/uploads/2016/04/Polo-Shirt-Free-PNG-Image.png",
             "categoryId": "2",
-            "id": "5",
+            "id": "4",
             "size": [ "M"]
         },
         {
@@ -51,7 +42,7 @@
             "category": "mens",
             "image" : "https://www.pngmart.com/files/7/Socks-Transparent-PNG.png",
             "categoryId": "2",
-            "id": "6",
+            "id": "5",
             "size": [ "S"]
         },
         {
@@ -60,7 +51,7 @@
             "category": "mens",
             "image" : "https://www.pngmart.com/files/6/Fur-Coat-PNG-Background-Image.png",
             "categoryId": "2",
-            "id": "7",
+            "id": "6",
             "size": ["L"]
         },
         {
@@ -69,8 +60,17 @@
             "category": "mens",
             "image" : "https://www.pngmart.com/files/3/Fancy-Hat-PNG-Photos.png",
             "categoryId": "2",
-            "id": "8",
+            "id": "7",
             "size": [ "XL"]
+        },
+        {
+            "title": "sweatshirt",
+            "price": 37,
+            "category": "mens",
+            "image" : "https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_.jpg",
+            "categoryId": "2",
+            "id": "8",
+            "size": ["L"]
         }
     ],
 

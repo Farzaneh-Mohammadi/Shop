@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-import _ from "lodash"
+import _ from "lodash";
 import Select from "react-select";
 import { toast } from "react-toastify";
 
@@ -16,7 +16,6 @@ const sizeOptions = [
   { value: "L", label: "L" },
   { value: "XL", label: "XL" },
 ];
-
 
 const sortOptions = [
   { value: "asc", label: "asc" },
@@ -34,7 +33,6 @@ const Products = () => {
   const [value, setValue] = useState("");
   const [sort, setSort] = useState("");
 
-
   const [filteredSearchProducts, setFilteredSearchProducts] = useState([]);
   let [query, setQuery] = useState({
     text: "",
@@ -42,9 +40,6 @@ const Products = () => {
 
   const { cart } = useCart();
   const dispatch = useCartActions();
-
-
-
 
   const searchProductsHandler = (e) => {
     setQuery({ ...query, text: e.target.value });
@@ -55,52 +50,36 @@ const Products = () => {
     setFilteredSearchProducts(theProducts);
   };
 
-
-
-
   const sizeHandler = (selectedOption) => {
-
-    if(selectedOption.value === "") {
-      setValue(selectedOption)
-      setFilteredSearchProducts([...products])
-    }
-    else {
-
+    if (selectedOption.value === "") {
+      setValue(selectedOption);
+      setFilteredSearchProducts([...products]);
+    } else {
       let sizeProducts = products.filter(
         (p) => p.size.indexOf(selectedOption.value) >= 0
       );
       setValue(selectedOption);
       setFilteredSearchProducts(sizeProducts);
-
-      
     }
   };
 
-
-
-  
   const sortHandler = (selectedOption) => {
-    if(selectedOption.value === "asc") {
-      let ascSort = _.orderBy(products, ['price'],['asc']);
-      setSort(selectedOption)
-      setFilteredSearchProducts(ascSort)
-    }
-    else{
-      let descSort = _.orderBy(products, ['price'],['desc']);
-      setSort(selectedOption)
-      setFilteredSearchProducts(descSort)
+    if (selectedOption.value === "asc") {
+      let ascSort = _.orderBy(products, ["price"], ["asc"]);
+      setSort(selectedOption);
+      setFilteredSearchProducts(ascSort);
+    } else {
+      let descSort = _.orderBy(products, ["price"], ["desc"]);
+      setSort(selectedOption);
+      setFilteredSearchProducts(descSort);
     }
   };
-  
 
   const addProductHandler = (product) => {
     console.log(product);
     toast.success(`${product.title}added to cart!`);
     dispatch({ type: "ADD_TO_CART", payload: product });
   };
-
-
-
 
   useEffect(() => {
     setLoading(true);
@@ -116,9 +95,6 @@ const Products = () => {
     setLoading(false);
   }, []);
 
-
-
-
   if (loading)
     return (
       <div>
@@ -129,51 +105,38 @@ const Products = () => {
 
   return (
     <>
+      <div className={styles.searchSort}>
+        {/* ------------ SEARCH ------------- */}
+        <div className={styles.searchContainer}>
+          <p>Search: </p>
+          <input
+            className={styles.searchInp}
+            type="text"
+            name="text"
+            placeholder="search..."
+            onChange={searchProductsHandler}
+            value={query.text}
+          />
+        </div>
 
+        <div className={styles.filters}>
+          {/* ------------ SIZE ------------- */}
+          <div className={styles.sizeContainer}>
+            <p>Size: </p>
+            <Select
+              value={value}
+              onChange={sizeHandler}
+              options={sizeOptions}
+            />
+          </div>
 
-    <div className={styles.searchSort}>
-      {/* ------------ SEARCH ------------- */}
-      <div className={styles.searchContainer}>
-        <p>Search: </p>
-        <input
-          className={styles.searchInp}
-          type="text"
-          name="text"
-          placeholder="search..."
-          onChange={searchProductsHandler}
-          value={query.text}
-        />
+          {/* ------------ SORT BY PRICE ------------- */}
+          <div className={styles.sortContainer}>
+            <p>Sort By Price: </p>
+            <Select value={sort} onChange={sortHandler} options={sortOptions} />
+          </div>
+        </div>
       </div>
-
-
-
-
-<div className={styles.filters}>
-      {/* ------------ SIZE ------------- */}
-      <div className={styles.sizeContainer}>
-        <p>Size: </p>
-        <Select
-          value={value}
-          onChange={sizeHandler}
-          options={sizeOptions}
-        />
-      </div>
-      
-
-            {/* ------------ SORT BY PRICE ------------- */}
-            <div className={styles.sortContainer}>
-        <p>Sort  By Price: </p>
-        <Select
-          value={sort}
-          onChange={sortHandler}
-          options={sortOptions}
-        />
-      </div>
-      </div>
-
-
-      </div>
-
 
       {/* ------------ PRODUCTS ------------- */}
       <div className={styles.cards}>
@@ -186,8 +149,8 @@ const Products = () => {
                 alt="product_image"
               />
             </div>
-            <div>
-              <h3>{product.title.slice(0, 15)}</h3>
+            <div  className={styles.cardDetail}>
+              <h3>{product.title}</h3>
               <p>
                 {" "}
                 <b>price:</b> {product.price}
