@@ -9,7 +9,7 @@ const Navbar = () => {
     <header>
       <nav className="navContainer">
         <ul className="navLeft">
-          <li>
+          <li className="nav-li">
             <NavLink
               to="/"
               className={(navData) =>

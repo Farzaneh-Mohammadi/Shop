@@ -52,3 +52,25 @@ margin-bottom: .2rem;
   margin-left: 35px;
   margin-top: -35px;
 }
+
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+
+  .navLeft {
+    width: 50%;
+  }
+
+}
+
+
+
+@media (min-width: 600px) and (max-width: 1000px) {
+  .navLeft {
+    width: 30%;
+  }
+
+}
