@@ -77,7 +77,7 @@ const Products = () => {
 
   const addProductHandler = (product) => {
     console.log(product);
-    toast.success(`${product.title}added to cart!`);
+    toast.success(`${product.title} added to cart!`);
     dispatch({ type: "ADD_TO_CART", payload: product });
   };
 

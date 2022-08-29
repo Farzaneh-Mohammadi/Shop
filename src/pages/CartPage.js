@@ -69,7 +69,7 @@ const CartPage = () => {
                       alt="product_image"
                     />
                   </div>
-                  <div>
+                  <div className={styles.itemInfo}>
                     <h3 style={{ marginBottom: "12px" }}>
                       <b>{item.title} </b>{" "}
                     </h3>
@@ -96,7 +96,7 @@ const CartPage = () => {
                     <button onClick={() => incHandler(item)}>+</button>
                   </div>
 
-                  <p>
+                  <p className={styles.totalPrice}>
                     {" "}
                     <b>Total Price: </b> ${item.price * item.quantity}
                   </p>
