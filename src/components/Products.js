@@ -51,7 +51,7 @@ const Products = () => {
   };
 
   const sizeHandler = (selectedOption) => {
-    if (selectedOption.value === "") {
+    if (selectedOption.value === "" ) {
       setValue(selectedOption);
       setFilteredSearchProducts([...products]);
     } else {
@@ -127,6 +127,7 @@ const Products = () => {
               value={value}
               onChange={sizeHandler}
               options={sizeOptions}
+              className={styles.selects}
             />
           </div>
 

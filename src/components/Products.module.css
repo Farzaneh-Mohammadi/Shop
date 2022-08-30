@@ -6,8 +6,9 @@
     display: flex;
 flex-wrap: wrap;
 justify-content: center;
-    background-color: #eaeaea;
-    padding: 1rem ;
+    background-color: #f5f5f4;
+    padding: 1rem 0 5rem 0;
+    /* margin-bottom: 2rem; */
 }
 
 .productImg {
@@ -29,7 +30,7 @@ justify-content: center;
     margin: .5rem;
     /* min-width: 300px;
     max-width: 400px; */
-    box-shadow: 2px 2px 10px #547983a4;
+    box-shadow: 1px 1px 10px #e57a3395;
 }
 
 .cardBtn {
@@ -49,8 +50,8 @@ justify-content: center;
 .searchSort {
     display: flex;
     justify-content: space-between;
-    background-color: #eaeaea;
-    padding: 2rem 4rem;
+    background-color: #f5f5f4;
+    padding: 2rem 8rem;
     align-items: center;
 }
 
@@ -60,6 +61,11 @@ justify-content: center;
     justify-content: space-between;
 }
 
+
+.selects:focus{
+    outline: none !important;
+    border: 2px solid #e57a33 !important;
+}
 
 .sortContainer {
     /* width: 13%; */
@@ -107,7 +113,7 @@ justify-content: center;
 
 .searchInp:focus {
     outline: none !important;
-    border: 2px solid #06b6d4;
+    border: 2px solid #e57a33;
 }
 
 

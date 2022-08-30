@@ -15,12 +15,12 @@ const Container = styled.div`
   display: flex;
   position: relative;
   overflow: hidden;
-  margin: 2rem ;
+  margin: 1rem 0;
 
   ${mobile({ display: "none" })}
   ${tablet({ 
      height: "40vh",
-  margin: "1rem" ,
+  margin: ".5rem 0" ,
    })}
 `;
 
@@ -62,20 +62,21 @@ const Slide = styled.div`
 `;
 
 const ImgContainer = styled.div`
-  height: 90%;
+  height: 100%;
   flex: 1;
-  margin: 3rem 5rem;
+  justify-content: center;
+  /* margin: 3rem 5rem; */
 
   ${tablet({ 
-      height: "50%",
-      margin: " 0 5rem 16rem 5rem ",
+      height: "40%",
+      margin: " 0 15rem 20rem 15rem ",
    })}
 
 `;
 
 const Image = styled.img`
-  height: 65%;
-  filter: drop-shadow(5px 5px 4px #6e706f);
+  height: 45%;
+  /* filter: drop-shadow(5px 5px 4px #6e706f); */
 
   ${tablet({ 
   margin: "0 0 5rem 0",
@@ -138,11 +139,10 @@ const Slider = () => {
             <ImgContainer>
               <Image src={item.img} />
             </ImgContainer>
-            <InfoContainer>
+            {/* <InfoContainer>
               <Title>{item.title}</Title>
               <Desc>{item.desc}</Desc>
-              {/* <Button>SHOW NOW</Button> */}
-            </InfoContainer>
+            </InfoContainer> */}
           </Slide>
         ))}
       </Wrapper>
