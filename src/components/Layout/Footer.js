@@ -3,9 +3,11 @@ import styles from "./Footer.module.css";
 
 import { BsTelephoneFill } from "react-icons/bs";
 import { SiGmail } from "react-icons/si";
+import map from "../../assets/map.jpg"
 
 
 const Footer = () => {
+
   return (
     <footer >
 
@@ -36,7 +38,9 @@ const Footer = () => {
 
 
 <section className={styles.third}>
-  <img src="https://i.postimg.cc/c4gTgc74/map.jpg" alt="map"/>
+  <img src={map} alt="map"/>
+
+
   <p> <BsTelephoneFill /> &nbsp; 0913 123 45 99</p>
   <p> <SiGmail /> &nbsp; digi@gmail.com</p>
 </section>

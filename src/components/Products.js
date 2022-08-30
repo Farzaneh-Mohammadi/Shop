@@ -5,9 +5,13 @@ import _ from "lodash";
 import Select from "react-select";
 import { toast } from "react-toastify";
 
+import { MdBookmarkAdded } from "react-icons/md";
+import { MdOutlineBookmarkAdd } from "react-icons/md";
+
 import styles from "./Products.module.css";
 import loading from "../assets/loading.gif";
 import { useCart, useCartActions } from "./../context/CartProvider";
+import { isClickableInput } from "@testing-library/user-event/dist/utils";
 
 const sizeOptions = [
   { value: "", label: "All" },
@@ -26,6 +30,8 @@ function checkInCart(cart, product) {
   return cart.find((c) => c.id === product.id);
 }
 
+
+
 const Products = () => {
   const [loading, setLoading] = useState(false);
   const [products, setProducts] = useState([]);
@@ -37,6 +43,13 @@ const Products = () => {
   let [query, setQuery] = useState({
     text: "",
   });
+
+
+  const [save, setSave] = useState(false);
+  const toggleSave = () => setSave((prev) => !prev)
+
+  
+  
 
   const { cart } = useCart();
   const dispatch = useCartActions();
@@ -80,6 +93,8 @@ const Products = () => {
     toast.success(`${product.title} added to cart!`);
     dispatch({ type: "ADD_TO_CART", payload: product });
   };
+
+
 
   useEffect(() => {
     setLoading(true);
@@ -158,12 +173,26 @@ const Products = () => {
                 <b>price:</b> ${product.price}
               </p>
               <br />
+
+
+
+              {/* <button onClick={toggleSave} className={styles.saveBtn}>
+      {save ? (
+        <MdBookmarkAdded />
+      ) : (
+        <MdOutlineBookmarkAdd />
+      )}
+    </button> */}
+
+
+
               <button
                 onClick={() => addProductHandler(product)}
                 className={styles.cardBtn}
               >
                 {checkInCart(cart, product) ? "In Cart" : "Add to Cart"}
               </button>
+
             </div>
           </div>
         ))}
