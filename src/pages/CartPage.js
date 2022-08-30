@@ -70,17 +70,47 @@ const CartPage = () => {
                     />
                   </div>
                   <div className={styles.itemInfo}>
-                    <h3 style={{ marginBottom: "12px" }}>
+                    <h2 style={{ marginBottom: "12px" }}>
                       <b>{item.title} </b>{" "}
-                    </h3>
+                    </h2>
 
                     <br />
-                    <p>
+                    <p style={{ fontSize: "20px" }}>
                       <b>details:</b>
                     </p>
-                    <p>Price: ${item.price}</p>
+                    <p>
+                      {" "}
+                      &nbsp; &nbsp;{" "}
+                      <span
+                        style={{
+                          backgroundColor: "#ef792b",
+                          width: "8px",
+                          height: "8px",
+                          borderRadius: "50%",
+                          display: "inline-block",
+                        }}
+                      >
+                        {" "}
+                      </span>{" "}
+                      &nbsp; Price: ${item.price}
+                    </p>
 
-                    <p>Size: {item.size}</p>
+                    <p>
+                      {" "}
+                      &nbsp; &nbsp;{" "}
+                      <span
+                        style={{
+                          backgroundColor: "#ef792b",
+                          width: "8px",
+                          height: "8px",
+                          borderRadius: "50%",
+                          display: "inline-block",
+                        }}
+                      >
+                        {" "}
+                      </span>{" "}
+                      &nbsp; Size: {item.size}
+                    </p>
                   </div>
 
                   <div className={styles.cartButtons}>
@@ -109,7 +139,10 @@ const CartPage = () => {
             <h2>Cart Summery</h2>
             <br />
             <p style={{ fontSize: "18px" }}>
-              <b> Total Price({cart.length} item): </b>${total}
+              <b> Total Price({cart.length} item): </b> &nbsp;{" "}
+              <span style={{ color: "#ef792b", fontSize: "20px" }}>
+                ${total}
+              </span>
             </p>
             <br />
             <Link to="/checkout">

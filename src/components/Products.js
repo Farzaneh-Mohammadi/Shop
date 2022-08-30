@@ -106,6 +106,7 @@ const Products = () => {
   return (
     <>
       <div className={styles.searchSort}>
+     
         {/* ------------ SEARCH ------------- */}
         <div className={styles.searchContainer}>
           <p>Search: </p>
@@ -137,7 +138,7 @@ const Products = () => {
             <Select value={sort} onChange={sortHandler} options={sortOptions} />
           </div>
         </div>
-      </div>
+        </div>
 
       {/* ------------ PRODUCTS ------------- */}
       <div className={styles.cards}>
@@ -154,7 +155,7 @@ const Products = () => {
               <h3>{product.title}</h3>
               <p>
                 {" "}
-                <b>price:</b> {product.price}
+                <b>price:</b> ${product.price}
               </p>
               <br />
               <button

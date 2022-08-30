@@ -6,7 +6,7 @@ import Navbar from "./Navbar";
 const Layout = ({ children }) => {
   return (
     <div>
-      <Announcement />
+      {/* <Announcement /> */}
       <Navbar />
       {children}
       <Footer />

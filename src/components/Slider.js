@@ -63,23 +63,23 @@ const Slide = styled.div`
 
 const ImgContainer = styled.div`
   height: 100%;
-  flex: 1;
   justify-content: center;
   /* margin: 3rem 5rem; */
 
   ${tablet({ 
       height: "40%",
-      margin: " 0 15rem 20rem 15rem ",
+      margin: " 0 20rem 25rem 0 ",
    })}
 
 `;
 
 const Image = styled.img`
-  height: 45%;
+  height: 65%;
   /* filter: drop-shadow(5px 5px 4px #6e706f); */
 
   ${tablet({ 
-  margin: "0 0 5rem 0",
+      height: "95%",
+  // margin: "0 0 5rem 0",
    })}
 `;
 
