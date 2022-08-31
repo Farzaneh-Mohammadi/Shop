@@ -6,7 +6,7 @@
 }
 
 .navLeft {
-  width: 15%;
+  width: 30%;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -24,7 +24,7 @@ margin-bottom: .2rem;
   border-radius: 10px;
   display: block;
   align-items: center;
-  margin-bottom: .2rem;
+  /* margin-bottom: .2rem; */
 }
 
 
@@ -49,7 +49,21 @@ margin-bottom: .2rem;
   font-size: 14px;
   background-color: #25548D;
   color: #fff;
-  margin-left: 35px;
+  margin-left: 60px;
+  margin-top: -35px;
+}
+
+.nav-cartBadge2 {
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  background-color: #25548D;
+  color: #fff;
+  margin-left: 90px;
   margin-top: -35px;
 }
 

@@ -13,7 +13,11 @@ const SavePage = () => {
     dispatch({ type: "REMOVE_SAVE", payload: cartItem });
   };
 
+  const removeAllHandler = () => {
+    dispatch({ type: "REMOVE_ALL_SAVES"});
+  };
 
+  
 
   if (!save.length)
     return (
@@ -45,6 +49,7 @@ const SavePage = () => {
         </div>
 
 
+        <button  onClick={() => removeAllHandler()} className={styles.removeAllBtn}>Remove All</button>
 
 
           <section className={styles.saveList}>

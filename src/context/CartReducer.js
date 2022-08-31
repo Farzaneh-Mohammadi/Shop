@@ -93,6 +93,13 @@ const CartReducer = (state, action) => {
       };
     }
 
+    case "REMOVE_ALL_SAVES": {
+      return {
+        ...state,
+        save: [],
+      };
+    }
+
 
 
     default:

@@ -82,3 +82,14 @@
     font-weight: 500;
 
 }
+
+.removeAllBtn{
+    margin-left: 5%;
+    padding: 10px;
+    border: 2px solid red;
+    border-radius: 5px;
+    color: red;
+    background-color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+}
