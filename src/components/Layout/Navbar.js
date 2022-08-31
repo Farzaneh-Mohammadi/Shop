@@ -3,7 +3,7 @@ import { useCart } from "../../context/CartProvider";
 import "./Navbar.css";
 
 const Navbar = () => {
-  const { cart } = useCart();
+  const { cart, save } = useCart();
 
   return (
     <header>
@@ -33,6 +33,20 @@ const Navbar = () => {
               <span className="nav-cartBadge">{cart.length}</span>
             </NavLink>
           </li>
+
+          <li className="nav-li">
+            <NavLink
+              to="/save"
+              className={(navData) =>
+                navData.isActive ? "nav-active-linkk" : ""
+              }
+              style={{ fontWeight: "500", fontSize: "18px" }}
+            >
+              Saves
+              <span className="nav-cartBadge">{save.length}</span>
+            </NavLink>
+          </li>
+
         </ul>
       </nav>
     </header>

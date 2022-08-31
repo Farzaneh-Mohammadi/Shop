@@ -51,6 +51,49 @@ const CartReducer = (state, action) => {
 
 
 
+    case "SAVE_PRODUCT": {
+      const updatedSave = [...state.save];
+
+      const updatedItemIndex = updatedSave.findIndex(
+        (item) => item.id === action.payload.id
+      );
+
+        // updatedSave.push({ ...action.payload, quantity: 1 });
+
+
+
+        if (updatedItemIndex < 0) {
+          updatedSave.push({ ...action.payload });
+        }
+
+
+      return {
+        ...state,
+        save: updatedSave,
+      };
+    }
+
+
+
+
+    case "REMOVE_SAVE": {
+      const updatedSave = [...state.save];
+      const updatedItemIndex = updatedSave.findIndex(
+        (item) => item.id === action.payload.id
+      );
+      const updatedItem = { ...updatedSave[updatedItemIndex] };
+
+        const filteredSave = updatedSave.filter(
+          (item) => item.id !== action.payload.id
+        )
+    
+      return {
+        ...state,
+        save: filteredSave,
+      };
+    }
+
+
 
     default:
       return state;

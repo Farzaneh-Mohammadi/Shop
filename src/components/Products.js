@@ -5,13 +5,13 @@ import _ from "lodash";
 import Select from "react-select";
 import { toast } from "react-toastify";
 
+import { IconContext } from "react-icons";
 import { MdBookmarkAdded } from "react-icons/md";
 import { MdOutlineBookmarkAdd } from "react-icons/md";
 
 import styles from "./Products.module.css";
-import loading from "../assets/loading.gif";
+// import loading from "../assets/loading.gif";
 import { useCart, useCartActions } from "./../context/CartProvider";
-import { isClickableInput } from "@testing-library/user-event/dist/utils";
 
 const sizeOptions = [
   { value: "", label: "All" },
@@ -30,6 +30,9 @@ function checkInCart(cart, product) {
   return cart.find((c) => c.id === product.id);
 }
 
+function checkInSave(save, product) {
+  return save.find((c) => c.id === product.id);
+}
 
 
 const Products = () => {
@@ -45,13 +48,13 @@ const Products = () => {
   });
 
 
-  const [save, setSave] = useState(false);
-  const toggleSave = () => setSave((prev) => !prev)
+  const [saveActive, setSaveActive] = useState(false);
+  const toggleSave = () => setSaveActive((prev) => !prev)
 
   
   
 
-  const { cart } = useCart();
+  const { cart, save } = useCart();
   const dispatch = useCartActions();
 
   const searchProductsHandler = (e) => {
@@ -93,6 +96,13 @@ const Products = () => {
     toast.success(`${product.title} added to cart!`);
     dispatch({ type: "ADD_TO_CART", payload: product });
   };
+
+  const saveProduct = (product) => {
+    console.log(product);
+    toast.success(`${product.title} saved to Save List!`);
+    dispatch({ type: "SAVE_PRODUCT", payload: product });
+  };
+
 
 
 
@@ -159,32 +169,41 @@ const Products = () => {
       <div className={styles.cards}>
         {filteredSearchProducts.map((product) => (
           <div key={product.id} className={styles.card}>
-            <div>
+                                        {/* <button onClick={toggleSave}>  */}
+                                        <button onClick={() => saveProduct(product)} className={styles.saveBtn}>
+
+{checkInSave(save, product) && save ? (
+  <IconContext.Provider value={{ color: 'green'}}>
+      <MdBookmarkAdded />
+    </IconContext.Provider>
+    ) : (
+  <MdOutlineBookmarkAdd />
+)}
+</button>
+{/* </button> */}
+
+
+
+
+
+            <div className={styles.imgAndSave}>
               <img
                 src={product.image}
                 className={styles.productImg}
                 alt="product_image"
               />
+
+
+
             </div>
+            
             <div  className={styles.cardDetail}>
-              <h3>{product.title}</h3>
+              <h3 style={{color: "#25548D"}}>{product.title}</h3>
               <p>
                 {" "}
-                <b>price:</b> ${product.price}
+                <b>price:</b> <span style={{color: "#25548D"}}> ${product.price} </span> 
               </p>
               <br />
-
-
-
-              {/* <button onClick={toggleSave} className={styles.saveBtn}>
-      {save ? (
-        <MdBookmarkAdded />
-      ) : (
-        <MdOutlineBookmarkAdd />
-      )}
-    </button> */}
-
-
 
               <button
                 onClick={() => addProductHandler(product)}
