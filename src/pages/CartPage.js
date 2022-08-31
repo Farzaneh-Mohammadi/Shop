@@ -143,7 +143,7 @@ const CartPage = () => {
   <span className={styles.addon}>
     Discount Code
   </span>
-  <input type="number" placeholder=" enter code" />
+  <input type="number" placeholder=" Enter Code" />
 </div>
 
             
