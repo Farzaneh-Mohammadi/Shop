@@ -138,6 +138,16 @@ const CartPage = () => {
           <section className={styles.rightSection}>
             <h2>Cart Summery</h2>
             <br />
+            
+            <div className={styles.inputGroup}>
+  <span className={styles.addon}>
+    Discount Code
+  </span>
+  <input type="number" placeholder=" enter code" />
+</div>
+
+            
+            <br />
             <p style={{ fontSize: "18px" }}>
               <b> Total Price({cart.length} item): </b> &nbsp;{" "}
               <span style={{ color: "#ef792b", fontSize: "20px" }}>
