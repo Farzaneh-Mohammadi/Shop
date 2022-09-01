@@ -44,7 +44,7 @@ const SavePage = () => {
             &nbsp; Item In Your Saves
           </h3>
           <Link to="/" style={{ textDecoration: "underline" }}>
-            Continue Shopping
+            See Products
           </Link>
         </div>
 

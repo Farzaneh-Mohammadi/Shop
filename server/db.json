@@ -74,14 +74,15 @@
         }
     ],
 
-    "categories" : [
+
+    "users" : [
         {
             "id" : "1",
-            "name" : "womens"
+            "name" : "fa"
         },
         {
             "id" : "2",
-            "name" : "mens"
+            "name" : "mo"
         }
     ]
 

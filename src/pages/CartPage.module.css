@@ -234,6 +234,26 @@ border: 2px solid #25548d69;
         font-size: smaller;    }
 
 
+        
+    .inputGroup {
+        flex-direction: column;      
+        }
+              
+              .inputGroup input{
+                padding: 0.5rem;
+                    border: 2px solid #25548d69;
+              }
+            
+              .inputGroup input:focus{
+                outline: none;
+                border: 3px solid #25548d69;
+                  }
+              
+              .addon {
+                font-size: 12px;
+                padding: 0.5rem;
+              }
+        
 }
 
 
@@ -353,4 +373,22 @@ border: 2px solid #25548d69;
     }
 
 
+    .inputGroup {
+flex-direction: column;      
+}
+      
+      .inputGroup input{
+        padding: 0.5rem;
+            border: 2px solid #25548d69;
+      }
+    
+      .inputGroup input:focus{
+        outline: none;
+        border: 3px solid #25548d69;
+          }
+      
+      .addon {
+        font-size: 12px;
+        padding: 0.5rem;
+      }
 }

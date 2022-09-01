@@ -139,6 +139,7 @@ const CartPage = () => {
             <h2>Cart Summery</h2>
             <br />
             
+            
             <div className={styles.inputGroup}>
   <span className={styles.addon}>
     Discount Code
@@ -155,9 +156,9 @@ const CartPage = () => {
               </span>
             </p>
             <br />
-            <Link to="/checkout">
+            {/* <Link to="/checkout"> */}
               <button className={styles.checkoutBtn}>Checkout</button>
-            </Link>
+            {/* </Link> */}
           </section>
         </div>
       </main>

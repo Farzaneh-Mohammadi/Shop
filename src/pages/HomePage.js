@@ -5,6 +5,7 @@ import Slider from "../components/Slider";
 import Announcement from "../components/Layout/Announcement";
 
 
+
 const HomePage = () => {
   return (
     <div>

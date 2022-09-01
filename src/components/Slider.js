@@ -18,10 +18,7 @@ const Container = styled.div`
   margin: 1rem 0;
 
   ${mobile({ display: "none" })}
-  ${tablet({ 
-     height: "40vh",
-  margin: ".5rem 0" ,
-   })}
+  ${tablet({  display: "none" })}
 `;
 
 const Arrow = styled.div`
@@ -66,10 +63,6 @@ const ImgContainer = styled.div`
   justify-content: center;
   /* margin: 3rem 5rem; */
 
-  ${tablet({ 
-      height: "40%",
-      margin: " 0 20rem 25rem 0 ",
-   })}
 
 `;
 
@@ -77,10 +70,7 @@ const Image = styled.img`
   height: 65%;
   /* filter: drop-shadow(5px 5px 4px #6e706f); */
 
-  ${tablet({ 
-      height: "95%",
-  // margin: "0 0 5rem 0",
-   })}
+
 `;
 
 const InfoContainer = styled.div`
@@ -88,19 +78,14 @@ const InfoContainer = styled.div`
   padding: 50px;
   margin: -15% 10rem 0 5rem;
 
-  ${tablet({ 
-   padding: "50px",
-  margin: "0 20rem 22rem 0"
-   })}
+
    
 `;
 
 const Title = styled.h1`
   font-size: 50px;
 
-  ${tablet({ 
-  fontSize:" 30px",
-   })}
+
 `;
 
 const Desc = styled.p`
@@ -109,11 +94,7 @@ const Desc = styled.p`
   font-weight: 500;
   letter-spacing: 3px;
 
-  ${tablet({ 
-  fontSize:" 10px",
-  margin: "10px 0px",
-  letterSpacing:  "0",
-   })}
+
 `;
 
 

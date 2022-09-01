@@ -34,7 +34,6 @@ function checkInSave(save, product) {
   return save.find((c) => c.id === product.id);
 }
 
-
 const Products = () => {
   const [loading, setLoading] = useState(false);
   const [products, setProducts] = useState([]);
@@ -47,12 +46,8 @@ const Products = () => {
     text: "",
   });
 
-
   const [saveActive, setSaveActive] = useState(false);
-  const toggleSave = () => setSaveActive((prev) => !prev)
-
-  
-  
+  const toggleSave = () => setSaveActive((prev) => !prev);
 
   const { cart, save } = useCart();
   const dispatch = useCartActions();
@@ -67,7 +62,7 @@ const Products = () => {
   };
 
   const sizeHandler = (selectedOption) => {
-    if (selectedOption.value === "" ) {
+    if (selectedOption.value === "") {
       setValue(selectedOption);
       setFilteredSearchProducts([...products]);
     } else {
@@ -103,14 +98,13 @@ const Products = () => {
     dispatch({ type: "SAVE_PRODUCT", payload: product });
   };
 
-
-
-
   useEffect(() => {
     setLoading(true);
 
     const getProducts = async () => {
-      const { data } = await axios.get("https://my-json-server.typicode.com/Farzaneh-Mohammadi/json/products");
+      const { data } = await axios.get(
+        "https://my-json-server.typicode.com/Farzaneh-Mohammadi/json/products"
+      );
       setProducts(data);
       setFilteredSearchProducts(data);
     };
@@ -131,7 +125,6 @@ const Products = () => {
   return (
     <>
       <div className={styles.searchSort}>
-     
         {/* ------------ SEARCH ------------- */}
         <div className={styles.searchContainer}>
           <p>Search: </p>
@@ -163,24 +156,32 @@ const Products = () => {
             <Select value={sort} onChange={sortHandler} options={sortOptions} />
           </div>
         </div>
-        </div>
+      </div>
 
       {/* ------------ PRODUCTS ------------- */}
       <div className={styles.cards}>
         {filteredSearchProducts.map((product) => (
           <div key={product.id} className={styles.card}>
-                                        {/* <button onClick={toggleSave}>  */}
-                                        <button onClick={() => saveProduct(product)} className={styles.saveBtn}>
 
-{checkInSave(save, product) && save ? (
-  <IconContext.Provider value={{ color: 'green'}}>
-      <MdBookmarkAdded />
-    </IconContext.Provider>
-    ) : (
-  <MdOutlineBookmarkAdd />
-)}
-</button>
-{/* </button> */}
+
+
+
+
+
+            {/* <button onClick={toggleSave}>  */}
+            <button
+              onClick={() => saveProduct(product)}
+              className={styles.saveBtn}
+            >
+              {save && checkInSave(save, product) ? (
+                <IconContext.Provider value={{ color: "green" }}>
+                  <MdBookmarkAdded />
+                </IconContext.Provider>
+              ) : (
+                <MdOutlineBookmarkAdd />
+              )}
+            </button>
+            {/* </button> */}
 
 
 
@@ -192,16 +193,14 @@ const Products = () => {
                 className={styles.productImg}
                 alt="product_image"
               />
-
-
-
             </div>
-            
-            <div  className={styles.cardDetail}>
-              <h3 style={{color: "#25548D"}}>{product.title}</h3>
+
+            <div className={styles.cardDetail}>
+              <h3 style={{ color: "#25548D" }}>{product.title}</h3>
               <p>
                 {" "}
-                <b>price:</b> <span style={{color: "#25548D"}}> ${product.price} </span> 
+                <b>price:</b>{" "}
+                <span style={{ color: "#25548D" }}> ${product.price} </span>
               </p>
               <br />
 
@@ -211,7 +210,6 @@ const Products = () => {
               >
                 {checkInCart(cart, product) ? "In Cart" : "Add to Cart"}
               </button>
-
             </div>
           </div>
         ))}
