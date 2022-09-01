@@ -25,7 +25,7 @@ function App() {
           <Route path="/save" element={<SavePage />} />
           <Route path="/checkout" element={<CheckoutPage />} />
 
-          {/* <Route path="/*" element={<NotFound />} /> */}
+          <Route path="/*" element={<NotFound />} />
 
         </Routes>
       </CartProvider>
