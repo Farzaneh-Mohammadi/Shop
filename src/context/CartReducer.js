@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 const CartReducer = (state, action) => {
   switch (action.type) {
     case "ADD_TO_CART": {
@@ -49,8 +51,6 @@ const CartReducer = (state, action) => {
       }
     }
 
-
-
     case "SAVE_PRODUCT": {
       const updatedSave = [...state.save];
 
@@ -58,23 +58,17 @@ const CartReducer = (state, action) => {
         (item) => item.id === action.payload.id
       );
 
-        // updatedSave.push({ ...action.payload, quantity: 1 });
+      // updatedSave.push({ ...action.payload, quantity: 1 });
 
-
-
-        if (updatedItemIndex < 0) {
-          updatedSave.push({ ...action.payload });
-        }
-
+      if (updatedItemIndex < 0) {
+        updatedSave.push({ ...action.payload });
+      }
 
       return {
         ...state,
         save: updatedSave,
       };
     }
-
-
-
 
     case "REMOVE_SAVE": {
       const updatedSave = [...state.save];
@@ -83,10 +77,10 @@ const CartReducer = (state, action) => {
       );
       const updatedItem = { ...updatedSave[updatedItemIndex] };
 
-        const filteredSave = updatedSave.filter(
-          (item) => item.id !== action.payload.id
-        )
-    
+      const filteredSave = updatedSave.filter(
+        (item) => item.id !== action.payload.id
+      );
+
       return {
         ...state,
         save: filteredSave,
@@ -99,8 +93,6 @@ const CartReducer = (state, action) => {
         save: [],
       };
     }
-
-
 
     default:
       return state;

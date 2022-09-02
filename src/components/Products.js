@@ -150,6 +150,7 @@ const Products = () => {
             />
           </div>
 
+
           {/* ------------ SORT BY PRICE ------------- */}
           <div className={styles.sortContainer}>
             <p>Sort By Price: </p>
